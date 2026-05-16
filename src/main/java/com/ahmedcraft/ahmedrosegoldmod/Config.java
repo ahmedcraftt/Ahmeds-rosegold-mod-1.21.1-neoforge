@@ -1,4 +1,4 @@
-package com.ahmedcraft.rosegoldmod;
+package com.ahmedcraft.ahmedrosegoldmod;
 
 import java.util.List;
 

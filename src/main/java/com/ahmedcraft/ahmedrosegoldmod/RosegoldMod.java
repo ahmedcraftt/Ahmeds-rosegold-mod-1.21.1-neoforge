@@ -1,5 +1,8 @@
-package com.ahmedcraft.rosegoldmod;
+package com.ahmedcraft.ahmedrosegoldmod;
 
+
+import com.ahmedcraft.ahmedrosegoldmod.items.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -25,6 +28,7 @@ public class RosegoldMod {
 
         NeoForge.EVENT_BUS.register(this);
 
+        ModItems.ITEMS.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
@@ -36,7 +40,11 @@ public class RosegoldMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey()== CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.ROSEGOLD_INGOT);
+            event.accept(ModItems.COPPER_AND_GOLD);
+            event.accept(ModItems.ROSEGOLD_NUGGET);
+        }
     }
 
     @SubscribeEvent

@@ -1,4 +1,4 @@
-package com.ahmedcraft.rosegoldmod;
+package com.ahmedcraft.ahmedrosegoldmod;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
